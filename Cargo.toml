@@ -1,0 +1,36 @@
+[package]
+name = "minisql"
+version = "0.1.0"
+edition = "2021"
+description = "A minimal MySQL-compatible SQL server for educational purposes"
+
+[dependencies]
+# Async runtime for handling multiple concurrent connections
+tokio = { version = "1", features = ["full"] }
+
+# JSON parsing and manipulation
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+
+# Binary serialization for WAL (much faster than JSON)
+bincode = "1.3"
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+# For generating random challenge bytes in MySQL handshake
+rand = "0.8"
+
+# SHA1 and SHA256 for MySQL authentication
+sha1 = "0.10"
+sha2 = "0.10"
+
+# Byte manipulation utilities
+bytes = "1"
+
+# For atomic file operations
+tempfile = "3"
+
+[profile.release]
+opt-level = 3

@@ -1,0 +1,26 @@
+/target
+
+# Test data directories (generated during testing)
+/data/
+/test_data/
+/test_in_operator_data/
+/test_rebuild_data/
+
+# Logs
+*.log
+server.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
